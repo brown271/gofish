@@ -95,7 +95,7 @@ public class GoFish extends Game {
     public boolean checkForCard(Card card, GoFishPlayer player) {
         for (Card x : player.getHand().getCards()) {
             if (x.getValue() == card.getValue()) {
-                System.out.println("I matched a " + x.getValue() + " and a " + card.getValue());
+
                 return true;
             }
 
@@ -169,10 +169,9 @@ public class GoFish extends Game {
                     GroupOfCards temp = new GroupOfCards(0);
                     for (int k = 0; k < checker.getHand().getCards().size(); k++) {
                         temp.getCards().add(checker.getHand().getCards().get(k));
-                        System.out.println("Card being checked: " + checker.getHand().getCards().get(k).getValue().getWorth());
-                        System.out.println("Value checked against: " + (j + 1));
+
                         if (checker.getHand().getCards().get(k).getValue().getWorth() == (j + 1)) {
-                            System.out.println("Deleted a card!");
+
                             Card c = checker.getHand().getCards().get(k);
                             checker.getOffHand().getCards().add(c);
                             temp.getCards().remove(c);
